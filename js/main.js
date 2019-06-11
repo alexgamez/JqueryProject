@@ -85,4 +85,28 @@ $(document).ready(function(){
     },500);
     return false;
   });
+
+  // Login falso
+  $("#login form").submit(function(){
+    var form_name = $("#form_name").val();
+    localStorage.setItem("form_name", form_name);
+    location.reload();
+  });
+
+  var form_name = localStorage.getItem("form_name");
+
+  if (form_name != null && form_name != "undefined" ) {
+    var about = $("#about p");
+
+    about.html("<br> <strong> Bienvenido, "+ form_name + "</strong>");
+    about.append("<a href='#' id='logout'>Cerrar sesion </a>");
+
+    $("#login form").hide();
+
+    $("#logout").click(function () {
+      localStorage.clear();
+      location.reload();
+    });
+  }
+
 });
