@@ -2,14 +2,16 @@
 $(document).ready(function(){
 
   // Slider
-  $(function(){
-    $('.galeria').bxSlider({
-      mode: 'fade',
-      captions: true,
-      slideWidth: 1200,
-      responsive: true
+	if(window.location.href.indexOf('index') > -1){
+    $(function(){
+      $('.galeria').bxSlider({
+        mode: 'fade',
+        captions: true,
+        slideWidth: 1200,
+        responsive: true
+      });
     });
-  });
+  }
 
   // Posts
 	if(window.location.href.indexOf('index') > -1){
@@ -108,5 +110,10 @@ $(document).ready(function(){
       location.reload();
     });
   }
+
+  // Acordeon
+	if(window.location.href.indexOf('about') > -1){
+		$("#acordeon").accordion();
+	}
 
 });
