@@ -1,0 +1,16 @@
+body{
+  background: url('../img/wallpaper-green.jpg');
+  background-attachment: fixed;
+}
+
+#logo{
+  background: #2ec13f;
+}
+
+#menu li:hover{
+  background: #2ec13f;
+}
+
+.button-more{
+  background: #2ec13f;
+}

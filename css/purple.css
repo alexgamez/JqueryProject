@@ -1,0 +1,16 @@
+body{
+  background: url('../img/wallpaper-purple.jpg');
+  background-attachment: fixed;
+}
+
+#logo{
+  background: #692ec1;
+}
+
+#menu li:hover{
+  background: #692ec1;
+}
+
+.button-more{
+  background: #692ec1;
+}

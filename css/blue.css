@@ -1,0 +1,16 @@
+body{
+  background: url('../img/wallpaper-blue.jpg');
+  background-attachment: fixed;
+}
+
+#logo{
+  background: #1E90FF;
+}
+
+#menu li:hover{
+  background: #1E90FF;
+}
+
+.button-more{
+  background: #1E90FF;
+}

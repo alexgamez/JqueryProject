@@ -62,4 +62,18 @@ $(document).ready(function(){
 		});
 	}
 
+  // Selector de tema
+  var theme = $("#theme");
+
+  $("#to-green").click(function() {
+    theme.attr("href", "css/green.css")
+  });
+
+  $("#to-blue").click(function() {
+    theme.attr("href", "css/blue.css")
+  });
+
+  $("#to-purple").click(function() {
+    theme.attr("href", "css/purple.css")
+  });
 });
