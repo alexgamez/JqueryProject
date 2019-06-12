@@ -15,11 +15,13 @@
 		<link rel="stylesheet" href="js/jquery-ui/jquery-ui.theme.min.css" />
 		<script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
 
+		<!-- validacion -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
     <!--  JS -->
     <script src="js\main.js" charset="utf-8"></script>
-  </head>
-  <body>
-
+	</head>
+	<body>
     <div class="" id="selector-theme">
       <div id="to-green">
 
@@ -32,15 +34,15 @@
       </div>
     </div>
 
-    <!--  Contenedor -->
-    <section id="global">
+		<section id="global">
 
-      <!--  Cabecera -->
-      <header>
-        <div class="" id="logo">
-          <h1>Proyecto JS</h1>
-        </div>
-        <div class="clearfix"></div>
+			<!-- Cabecera -->
+			<header>
+				<div id="logo">
+					<h1>Proyecto JS</h1>
+				</div>
+
+				<div class="clearfix"></div>
 
         <nav id="menu">
           <ul>
@@ -50,35 +52,42 @@
             <li><a href="contact.html">Contacto</a></li>
           </ul>
         </nav>
-      </header>
+			</header>
 
-      <!--  Contendio-->
-      <section id="content">
-        <div class="" id="box">
-          <h2>Sobre mi</h2>
-					<div id="acordeon">
-						<h3>¿Quienes somos?</h3>
-						<div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo.
-							</p>
-						</div>
 
-						<h3>Nuestros servicios</h3>
-						<div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo.
-							</p>
-						</div>
+			<!-- Contenido -->
+			<section id="content">
 
-						<h3>Nuestros clientes</h3>
-						<div>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper justo.
-							</p>
-						</div>
-					</div>
-        </div>
+				<div id="box">
+					<!-- Cargar formulario -->
+					<h2>Contacto</h2>
+
+					<form action="" method="POST" id="form_contact">
+						<label for="name">Nombre</label>
+						<input type="text" name="name" data-validation="alphanumeric" />
+
+						<label for="surname">Apellidos</label>
+						<input type="text" name="surname" data-validation="alphanumeric" />
+
+						<label>Email</label>
+						<input type="email" name="email" data-validation="email"/>
+
+						<label for="sex">Sexo</label>
+						<select name="sex" data-validation="required">
+							<option value="men">Hombre</option>
+							<option value="woman">Mujer</option>
+						</select>
+
+						<label for="date">Fecha de nacimiendo</label>
+						<input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy"/>
+
+						<label for="years">Edad</label>
+						<input type="number" name="years" data-validation="number"/>
+
+						<input type="submit" value="Enviar" />
+					</form>
+
+				</div>
 
         <aside id="sidebar">
           <div id="about">
@@ -111,14 +120,15 @@
 						</form>
 					</div>
         </aside>
-        <div class="clearfix"></div>
-      </section>
-    </section>
+
+				<div class="clearfix"></div>
+			</section>
+
+		</section>
 
     <footer>
       Curso de Js
       <a href="#" class="subir"> Ir arriba </a>
     </footer>
-
-  </body>
+	</body>
 </html>
